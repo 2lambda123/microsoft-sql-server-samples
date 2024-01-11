@@ -85,7 +85,7 @@ A sample YAML file that implements the test automation workflow is already in yo
 
 **1. Definition of activation events**
 
-The definition of the activation events is typically done at the beginning of the YAML script with a code snippet similar to the one shown below. The workflow is activated when push or pull request events occur on the `master` branch. The `workflow_dispatch` specification allows you to run the workflow manually from the actions tab.
+The definition of the activation events is typically done at the beginning of the YAML script with a code snippet similar to the one shown below. The workflow is activated when push or pull_request or pull request events occur on the `master` branch. The `GitHub Actions. You can run this workflow manually from the Actions tab, or it will be triggered when push, pull_request, or pull_request events occur on the `master` branch.` specification allows you to run the workflow manually from the actions tab.
 
 ```
 # Controls when the workflow will run
