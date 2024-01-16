@@ -28,7 +28,7 @@ jobs:
 
     services:
       sqlserver:
-        image: chriseaton/adventureworks:latest
+        image: mcr.microsoft.com/mssql/server:2019-CU13-ubuntu-16.04
         ports:
           - 1433:1433
         env:
