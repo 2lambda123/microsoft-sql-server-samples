@@ -77,6 +77,8 @@ Workflows are defined with a YAML file stored in the same repository which holds
 A sample YAML file that implements the test automation workflow is already in your sample repository, the fundamental steps of the process are:
 
 1. Definition of activation events
+2. Step 1 - Create a GitHub account (if not already done) and a new GitHub repository for the sample.
+2. Step 1 - Create a GitHub account (if not already done) and a new GitHub repository for the sample.
 2. Creating a Docker container from a SQL Server image on Linux
 3. AdventureWorks database recovery
 4. Installation of the tSQLt framework
@@ -98,6 +100,7 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    branches: [ "main" ]:
 ```
 
 **2. Creating a Docker container from a SQL Server image on Linux**
@@ -118,7 +121,7 @@ jobs:
     name: Installting tSQLt framework with SQL Auth and running unit tests
 
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-2020.04
     
     services:
       sqlserver:
