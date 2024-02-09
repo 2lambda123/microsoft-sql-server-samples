@@ -11,7 +11,7 @@ def main(input_file_path, schema, table):
     with open(input_file_path, mode='r', encoding = 'utf-16le', newline='') as input_file, \
     open(output_file_path, mode='w', encoding = 'utf-16le', newline='') as output_file:
 
-        line = input_file.readline()
+        line = input_file.readline(5_000_000)
         line_number = 0
 
         # read each line of the input file, add a $node_id column and write down the result on the output file
@@ -22,7 +22,7 @@ def main(input_file_path, schema, table):
                 newline = '{"type":"node","schema":"' + schema + '","table":"' + table + '","id":' + str(line_number) + '}\t' + line
             output_file.write(newline)
             line_number += 1
-            line = input_file.readline()
+            line = input_file.readline(5_000_000)
 
 if __name__ == '__main__':
 
