@@ -3,6 +3,20 @@ import os
 from optparse import OptionParser
 
 def main(input_file_path, schema, table):
+    """This function takes in an input file path, a schema, and a table name and creates a new output file in the same directory as the input file. The output file will have a $node_id column added to each line. The function returns the output file path.
+    Parameters:
+        - input_file_path (str): The path to the input file.
+        - schema (str): The schema to be added to the output file.
+        - table (str): The table name to be added to the output file.
+    Returns:
+        - output_file_path (str): The path to the output file.
+    Processing Logic:
+        - Creates an output file path by adding '_as_node.csv' to the end of the input file path.
+        - Opens the input file and output file using the specified encoding.
+        - Reads each line of the input file and adds a $node_id column to the beginning of the line.
+        - Writes the modified line to the output file.
+        - Increments the line number and continues until the end of the input file is reached."""
+    
 
     # create the output file in the same directory as the input file
     output_file_path = os.path.splitext(input_file_path)[0] + '_as_node' + '.csv'
