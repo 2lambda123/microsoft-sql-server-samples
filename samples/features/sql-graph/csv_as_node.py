@@ -9,7 +9,7 @@ def main(input_file_path, schema, table):
     :param input_file_path: str
     :param schema: str
     :param table: str
-    :returns: - output_file_path (str): The path to the output file.
+    :returns: output_file_path (str): The path to the output file.
     Processing Logic:
         - Creates an output file path by adding '_as_node.csv' to the end of the input file path.
         - Opens the input file and output file using the specified encoding.
